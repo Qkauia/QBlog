@@ -77,5 +77,7 @@ gem 'image_processing', '~> 1.12'
 gem 'kaminari', '~> 1.2'
 
 gem 'rubocop', '~> 1.59', require: false
-
+# linepay
 gem 'faraday', '~> 2.9'
+# Markdown
+gem 'redcarpet'

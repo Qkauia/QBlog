@@ -102,6 +102,10 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -227,6 +231,7 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
+    redcarpet (3.6.0)
     regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
@@ -298,6 +303,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  dotenv-rails (~> 2.8)
   faraday (~> 2.9)
   image_processing (~> 1.12)
   jbuilder
@@ -307,6 +313,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
+  redcarpet
   rubocop (~> 1.59)
   selenium-webdriver
   sprockets-rails
