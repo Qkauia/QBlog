@@ -1,9 +1,13 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
-
-
-<h1><%= @post.title %></h1>
-<h2><%= @post.subtitle %></h2>
-<h3>文章分類<%= @post.category.name %></h3>
-<div class="markdown max-w-none"><%= raw @post.rendered_body %></div>
+<article class="article px-[60px] py-[15px]">
+  <h2 class="text-[48px] text-gray-700"><%= @post.title %></h2>
+  <div class="flex items-center">
+    <h3 class="text-[32px] text-gray-500">✎  <%= @post.subtitle %></h3>
+    <p class="ml-5 text-[22px] text-gray-500 border-[5px] border-gray-400 rounded-lg px-3 py-1 font-bold">
+      <span class="text-red-500">#<%= @post.category.name %></span>
+    </p>
+  </div>
+  <hr>
+  <div class="markdown max-w-none mt-5"><%= raw @post.rendered_body %></div>
+  <hr>
+</article>
 

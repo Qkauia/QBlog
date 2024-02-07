@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
     if params[:category] && params[:category][:name].present?
       category = Category.find_or_create_by(name: params[:category][:name])
-      # 直接在这里给 @post 的 category_id 赋值是多余的，因为下面我们会直接赋值 category 对象
     end
     
     @post = Post.new(post_params)
