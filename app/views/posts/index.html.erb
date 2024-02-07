@@ -1,0 +1,18 @@
+<h2 class="text-[45px] text-center">Welcome to Qkauia's Blog</h2>
+<% @posts.each do |post| %>
+  <article class="flex mt-5">
+    <div class="index w-2/3 mx-auto bg-base-100 shadow-lg border-2 p-5 transition duration-300 transform hover:scale-105 hover:shadow-xl rounded-lg relative">
+      <%= link_to post_path(post) do %>
+      <h2 class="text-[32px] text-gray-600"><%= post.title %></h2>
+      <hr class="h-[20px] mt-5"> 
+      <div class="flex items-center justify-between mt-5">
+        <h3 class="text-[28px] text-gray-500"><%= post.subtitle %></h3>
+        <p class="ml-5 text-[28px] text-gray-500 font-bold">
+          <span class="text-red-500">#<%= post.category.name %></span>
+        </p>
+      </div>
+      <div class="absolute top-2 right-[-15px] border-[5px] border-gray-300 bg-gray-300 rounded-lg px-3 py-1 font-bold"><%= format_datetime(post.updated_at) %></div>
+      <% end %>
+    </div>
+  </article>
+<% end %>

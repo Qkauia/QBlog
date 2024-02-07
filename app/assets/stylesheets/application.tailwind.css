@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown h1 {
+  font-size: 3.5rem;
+}
+
+.markdown h2 {
+  font-size: 3rem;
+}
+
+.markdown h3 {
+  font-size: 2.5rem;
+}
+
+.markdown h4 {
+  font-size: 2rem;
+}
+
+.markdown h5 {
+  font-size: 1.75rem;
+}
+
+.markdown p {
+  font-size: 1.5rem;
+}
+
+.markdown a {
+  color: cadetblue;
+  font-size: 1.75rem;
+}
+
+.markdown ul {
+  list-style-type: square;
+  color: rgb(108, 107, 107);
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 2px;
+  font-size: 1.5rem;
+}
+
+.markdown hr {
+  border: none;
+  height: 2px;
+  background-color: #b2afaf;
+  margin: 15px auto;
+}
+
+.markdown pre {
+  background-color: #eee0e0;
+  border: 2px solid #888787;
+  border-radius: 7px;
+  padding: 15px;
+  overflow: auto;
+  line-height: 1.2;
+  font-family: Consolas, "Courier New", monospace;
+  width: 30%;
+}
+
+.markdown code {
+  background-color: #f9ecec;
+  padding: 4px 4px;
+  font-family: Consolas, "Courier New", monospace; /* 字体 */
+  font-size: 80%;
+  border-radius: 7px;
+}
+
+.markdown pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 100%;
+}
+
+.notice,
+.alert {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.notice {
+  background-color: rgb(86, 170, 86);
+  color: green;
+}
+
+.alert {
+  background-color: lightcoral;
+  color: red;
+}
+
+.article hr {
+  border: none;
+  height: 10px;
+  background-color: #abc178;
+  margin: 10px auto;
+}
+
+.index hr {
+  border: none;
+  height: 4px;
+  background-color: #abc178;
+  margin: 10px auto;
+}
+
+.index::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 37px;
+  border-top: 8px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #d1d5db;
+}

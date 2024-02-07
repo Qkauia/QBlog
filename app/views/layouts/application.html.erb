@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <div class="navbar bg-base-100 shadow-lg rounded-box flex mb-[20px] h-[45px] px-6">
+      <%= render 'shared/navbar' %>
+    </div>
+    <%= render "shared/flash" if flash.any? %>
+    <main class="mx-[100px]">
+      <%= yield %>
+    </main>
+  </body>
+  <footer class="footer p-[20px] bg-neutral text-neutral-content bg-base-100 shadow-lg rounded-box flex justify-around px-8 mt-[40px] border-t-2 border-gray-700">
+    <%= render 'shared/footer' %>
+  </footer>
+</html>
