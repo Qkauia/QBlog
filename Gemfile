@@ -69,6 +69,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem 'devise'
 
 gem 'paranoia', '~> 2.6'
 
@@ -76,8 +77,12 @@ gem 'image_processing', '~> 1.12'
 
 gem 'kaminari', '~> 1.2'
 
+gem 'acts_as_list', '~> 1.1'
+
 gem 'rubocop', '~> 1.59', require: false
 # linepay
 gem 'faraday', '~> 2.9'
 # Markdown
 gem 'redcarpet'
+
+gem 'ransack', '~> 4.1'

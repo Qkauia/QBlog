@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
   acts_as_paranoid
+
+  paginates_per 3
   
   belongs_to :category
 
@@ -25,6 +27,10 @@ class Post < ApplicationRecord
     renderer = Redcarpet::Render::HTML.new(renderer_options)
     markdown = Redcarpet::Markdown.new(renderer, extensions)
     markdown.render(body)
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["body", "category_id", "created_at", "deleted_at", "id", "id_value", "subtitle", "title", "updated_at"]
   end
   
 end

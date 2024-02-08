@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts, except: %i[destroy]
+  devise_for :users, controllers: { registrations: 'custom_registrations' }
+  resources :posts
   root "posts#index"
+  get 'about', to: 'posts#about'
 end

@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
-  before_action :find_posts, only: %i[show edit update]
+  before_action :find_posts, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show about]
+  before_action :check_admin, only: %i[new create edit update destroy]
 
   def index
-    @posts = Post.order(id: :desc)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result(distinct: true).order(updated_at: :desc).page(params[:page])
   end
 
   def show
@@ -44,8 +47,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
+    @post.delete
     redirect_to root_path, notice: '文章刪除成功'
+  end
+
+  def about
   end
 
   private
@@ -60,6 +66,12 @@ class PostsController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def check_admin
+    unless current_user.admin?
+      redirect_to root_path, alert: "只有管理員可以進行這項操作。"
+    end
   end
 
 end

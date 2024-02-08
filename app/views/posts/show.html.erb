@@ -1,3 +1,9 @@
+<div class="ml-[55px]">
+  <% if current_user %>
+    <%= link_to '編輯文章', edit_post_path(@post), class: 'btn text-[32px] mr-5 text-gray-500' %>
+    <%= link_to '刪除文章', post_path(@post), data: { turbo_method: 'delete', turbo_confirm: '確定要刪除？' }, class: 'btn text-[32px] text-red-500' %>
+  <% end %>
+</div>
 <article class="article px-[60px] py-[15px]">
   <h2 class="text-[48px] text-gray-700"><%= @post.title %></h2>
   <div class="flex items-center">
@@ -7,7 +13,8 @@
     </p>
   </div>
   <hr>
-  <div class="markdown max-w-none mt-5"><%= raw @post.rendered_body %></div>
+  <div class="flex justify-end">更新時間：<%= format_datetime(@post.updated_at) %></div>
+  <article class="markdown max-w-none mt-5"><%= raw @post.rendered_body %></article>
   <hr>
 </article>
 
