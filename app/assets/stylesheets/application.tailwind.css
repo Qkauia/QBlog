@@ -122,3 +122,78 @@
   border-bottom: 15px solid transparent;
   border-left: 15px solid #d1d5db;
 }
+
+.preview h1 {
+  font-size: 3.5rem;
+}
+
+.preview h2 {
+  font-size: 3rem;
+}
+
+.preview h3 {
+  font-size: 2.5rem;
+}
+
+.preview h4 {
+  font-size: 2rem;
+}
+
+.preview h5 {
+  font-size: 1.75rem;
+}
+
+.preview p {
+  font-size: 1.5rem;
+}
+
+.preview a {
+  color: cadetblue;
+  font-size: 1.75rem;
+}
+
+.preview ul {
+  list-style-type: square;
+  color: rgb(108, 107, 107);
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.preview li {
+  margin-bottom: 2px;
+  font-size: 1.5rem;
+}
+
+.preview hr {
+  border: none;
+  height: 2px;
+  background-color: #b2afaf;
+  margin: 15px auto;
+}
+
+.preview pre {
+  background-color: #eee0e0;
+  border: 2px solid #888787;
+  border-radius: 7px;
+  padding: 15px;
+  overflow: auto;
+  line-height: 1.2;
+  font-family: Consolas, "Courier New", monospace;
+  width: 30%;
+  margin: 10px 0;
+}
+
+.preview code {
+  background-color: #f9ecec;
+  padding: 4px 4px;
+  font-family: Consolas, "Courier New", monospace; /* 字体 */
+  font-size: 80%;
+  border-radius: 7px;
+}
+
+.preview pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 100%;
+}
