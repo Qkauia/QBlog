@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: qblog_production
   username: <%= ENV["DEV_DATABASE_USERNAME"] %>
   password: <%= ENV["DEV_DATABASE_PASSWORD"] %>
