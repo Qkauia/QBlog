@@ -305,3 +305,21 @@
 .preview tr:hover {
   background-color: #eaeaea;
 }
+
+.flash-message {
+  font-size: 20px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(150, 175, 141);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition:
+    opacity 0.5s,
+    display 0.5s;
+}

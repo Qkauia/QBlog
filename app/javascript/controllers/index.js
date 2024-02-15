@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CopysymbolController from "./copysymbol_controller"
+application.register("copysymbol", CopysymbolController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

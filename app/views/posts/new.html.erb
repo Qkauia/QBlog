@@ -36,7 +36,52 @@
                         "data-action": "input->preview#show",
                         placeholder: '填寫內文(＊必要填寫)' %>
       </div>
-
+      
+      <details class="collapse bg-base-100 mt-[15px] mb-[30px] w-full border-2">
+        <summary class="collapse-title text-2xl font-medium text-center">特殊符號</summary>
+        <div class="collapse-content text-2xl p-6" data-controller="copysymbol"> 
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☰</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >➜</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >«</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >»</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >※</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >＊</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☑</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☒</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✔</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✖</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >ꚰ</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✎</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✏</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✐</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☞</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☜</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☟</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⌫</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⌘</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" ></button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓵</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓶</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓷</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓸</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓹</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓺</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓻</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓼</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓽</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓾</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⁇</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⁉</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >△</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >▲</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⊙</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >◎</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >□</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >■</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✧</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✦</button>
+        </div>
+      </details>
       <div class="my-5">
         <%= f.submit '提交', class: 'btn btn-accent text-2xl' %>
       </div>
@@ -44,6 +89,23 @@
   </div>
 
   <div class="w-1/2 pl-4 mt-7">
+    <details class="collapse bg-base-100 mb-[30px] w-full border-2">
+      <summary class="collapse-title text-2xl font-medium text-center">Markdown語法快捷</summary>
+      <div class="collapse-content text-2xl p-6" data-controller="copysymbol"> 
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >#### ☰☰</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >##### ☰☰</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >- - -</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >**粗**</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >*斜*</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >~~刪~~</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >[google](https://)</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >> 引言</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >|左|中|右|</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >|:--|:--:|--:|</button>
+        <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >|文|文|文|</button>
+      </div>
+    </details>
     <div data-preview-target="preview" class="preview h-[600px] p-4 border border-[3px] border-green-200 rounded-md overflow-auto"></div>
   </div>
+    
 </div>
