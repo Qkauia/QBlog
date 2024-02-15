@@ -4,26 +4,34 @@
 
 .markdown h1 {
   font-size: 3.5rem;
+  margin: 10px 0px;
 }
 
 .markdown h2 {
   font-size: 3rem;
+  margin: 10px 0px;
 }
 
 .markdown h3 {
   font-size: 2.5rem;
+  margin: 15px 0px;
 }
 
 .markdown h4 {
   font-size: 2rem;
+  margin: 15px 0px;
+  color: #6f8242;
 }
 
 .markdown h5 {
   font-size: 1.75rem;
+  margin: 15px 0px;
+  color: #6f8242;
 }
 
 .markdown p {
   font-size: 1.5rem;
+  padding: 4px 4px;
   margin: 15px 0px;
 }
 
@@ -34,6 +42,11 @@
 .markdown a {
   color: cadetblue;
   font-size: 1.75rem;
+  margin: 0px 4px 0px 4px;
+}
+
+.markdown strong {
+  margin: 0px 4px 0px 4px;
 }
 
 .markdown ul {
@@ -45,6 +58,7 @@
 
 .markdown li {
   margin-bottom: 2px;
+  margin: 10px 0px;
   font-size: 1.5rem;
 }
 
@@ -65,13 +79,14 @@
   font-family: Consolas, "Courier New", monospace;
   width: 60%;
   margin: 25px 0;
+  font-size: 22px;
 }
 
 .markdown code {
   background-color: #f9ecec;
   padding: 4px 4px;
-  font-family: Consolas, "Courier New", monospace; /* 字体 */
-  font-size: 80%;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 100%;
   border-radius: 7px;
 }
 
@@ -166,31 +181,43 @@
 
 .preview h1 {
   font-size: 3.5rem;
+  margin: 10px 0px;
 }
 
 .preview h2 {
   font-size: 3rem;
+  margin: 10px 0px;
 }
 
 .preview h3 {
   font-size: 2.5rem;
+  margin: 10px 0px;
 }
 
 .preview h4 {
   font-size: 2rem;
+  margin: 10px 0px;
 }
 
 .preview h5 {
   font-size: 1.75rem;
+  margin: 10px 0px;
 }
 
 .preview p {
   font-size: 1.5rem;
+  padding: 4px 4px;
+  margin: 10px 0px;
 }
 
 .preview a {
   color: cadetblue;
   font-size: 1.75rem;
+  margin: 0px 4px 0px 4px;
+}
+
+.preview strong {
+  margin: 0px 4px 0px 4px;
 }
 
 .preview ul {
@@ -203,6 +230,7 @@
 .preview li {
   margin-bottom: 2px;
   font-size: 1.5rem;
+  margin: 10px 0px;
 }
 
 .preview hr {
@@ -220,7 +248,7 @@
   overflow: auto;
   line-height: 1.2;
   font-family: Consolas, "Courier New", monospace;
-  width: 40%;
+  width: 50%;
   margin: 20px 0;
 }
 
@@ -228,7 +256,7 @@
   background-color: #f9ecec;
   padding: 4px 4px;
   font-family: Consolas, "Courier New", monospace; /* 字体 */
-  font-size: 80%;
+  font-size: 100%;
   border-radius: 7px;
 }
 
@@ -262,8 +290,8 @@
 .preview td {
   border: 2px solid #ddd;
   padding: 8px;
-  text-align: center; /* 水平置中 */
-  vertical-align: middle; /* 垂直置中 */
+  text-align: center;
+  vertical-align: middle;
 }
 
 .preview th {
@@ -276,4 +304,22 @@
 
 .preview tr:hover {
   background-color: #eaeaea;
+}
+
+.flash-message {
+  font-size: 20px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(150, 175, 141);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition:
+    opacity 0.5s,
+    display 0.5s;
 }
