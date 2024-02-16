@@ -13,6 +13,10 @@
 <div data-controller="preview" class="flex flex-wrap mt-4">
   <div class="w-1/2 pr-4">
     <%= form_with model: @post, data: { turbo: false }, class: 'flex flex-col' do |f| %>
+      <div class="mb-5">
+        <%= f.submit '提交', class: 'btn btn-accent text-2xl' %>
+        <button type="button" class="btn btn-accent text-2xl ml-2" data-action="click->preview#showInModal">滿版預覽</button>
+      </div>
       <div>
         <%= f.label :title, '標題', class: 'block text-2xl font-medium text-gray-700' %>
         <%= f.text_field :title, class: 'input input-bordered w-full border-2 text-2xl mb-3 p-2', placeholder: '填寫標題(＊必要填寫)' %>
@@ -28,20 +32,20 @@
         <%= text_field_tag 'category[name]', nil, class: 'input input-bordered w-full border-2 text-2xl mb-3 p-2', placeholder: '新增文章分類' %>
       </div>
 
-      <div>
         <%= f.label :body, '內文', class: 'block text-2xl font-medium text-gray-700' %>
         <%= f.text_area :body, 
                         class: 'textarea textarea-bordered w-full h-72 text-2xl p-2', 
-                        "data-preview-target": "source", 
-                        "data-action": "input->preview#show",
+                        data: { preview_target: "source", action: "input->preview#show" },
                         placeholder: '填寫內文(＊必要填寫)' %>
-      </div>
+
+        
       
       <details class="collapse bg-base-100 mt-[15px] mb-[30px] w-full border-2">
         <summary class="collapse-title text-2xl font-medium text-center">特殊符號</summary>
         <div class="collapse-content text-2xl p-6" data-controller="copysymbol"> 
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☰</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >➜</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⮑</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >«</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >»</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >※</button>
@@ -59,7 +63,6 @@
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >☟</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⌫</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⌘</button>
-          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" ></button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓵</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓶</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓷</button>
@@ -70,6 +73,7 @@
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓼</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓽</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⓾</button>
+          <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" ></button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⁇</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >⁉</button>
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >△</button>
@@ -82,13 +86,11 @@
           <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >✦</button>
         </div>
       </details>
-      <div class="my-5">
-        <%= f.submit '提交', class: 'btn btn-accent text-2xl' %>
-      </div>
+      
     <% end %>
   </div>
 
-  <div class="w-1/2 pl-4 mt-7">
+  <div class="w-1/2 pl-4">
     <details class="collapse bg-base-100 mb-[30px] w-full border-2">
       <summary class="collapse-title text-2xl font-medium text-center">Markdown語法快捷</summary>
       <div class="collapse-content text-2xl p-6" data-controller="copysymbol"> 
@@ -105,7 +107,6 @@
         <button class="btn btn-sm text-xl mb-2" data-action="click->copysymbol#copy" >|文|文|文|</button>
       </div>
     </details>
-    <div data-preview-target="preview" class="preview h-[600px] p-4 border border-[3px] border-green-200 rounded-md overflow-auto"></div>
+    <div data-preview-target="preview" class="preview h-[678px] p-4 mb-5 border border-[3px] border-green-200 rounded-md overflow-auto"></div>
   </div>
-    
 </div>
